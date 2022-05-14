@@ -10,5 +10,9 @@ const app = createApp(App)
 import router from "./router/index"
 app.use(router)
 
+// 导入axios
+import axios from './plugins/index'
+app.config.globalProperties.$axios = axios
+
 app.use(ElementPlus)
 app.mount('#app')
