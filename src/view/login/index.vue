@@ -9,10 +9,17 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { reactive, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import API from "../../plugins";
 let router = useRouter();
+
+import { useStore } from "vuex";
+const store = useStore();
+
+onMounted(() => {
+  console.log(store);
+});
 const methods = reactive({
   toHome() {
     router.push({

@@ -14,5 +14,9 @@ app.use(router)
 import axios from './plugins/index'
 app.config.globalProperties.$axios = axios
 
+// 导入axios
+import store from './store/index'
+app.use(store)
+
 app.use(ElementPlus)
 app.mount('#app')
